@@ -1,0 +1,131 @@
+device=mps | T=4 | attn=ssa | surrogate=atan
+train=8522 monitor=947 test=3925 (split_file=splits/imagenette_train90_monitor10_seed0.json)
+student initialised from runs/series_v2/seed0/phase1/distill_latest.pt
+teacher params=5,717,416 | student params=5,803,432 | W_proj params=0
+
+=== Global fine-tuning (CE + KL) ===
+  [ft] ep 0 it  100/532 loss=4.7334 ce=5.0905 kl=4.5804 lr=7.73e-05 | mps alloc=142MiB driver=4675MiB
+  [ft] ep 0 it  200/532 loss=3.8376 ce=2.6596 kl=4.3425 lr=9.98e-05 | mps alloc=142MiB driver=4675MiB
+  [ft] ep 0 it  300/532 loss=3.8096 ce=2.9875 kl=4.1619 lr=9.89e-05 | mps alloc=142MiB driver=4675MiB
+  [ft] ep 0 it  400/532 loss=3.7531 ce=3.4204 kl=3.8957 lr=9.73e-05 | mps alloc=142MiB driver=4675MiB
+  [ft] ep 0 it  500/532 loss=3.7995 ce=2.9519 kl=4.1628 lr=9.49e-05 | mps alloc=142MiB driver=4675MiB
+[ft] epoch 0: student@1=48.36 teacher@1=78.88 (935.2s)
+  [ft] ep 1 it  100/532 loss=3.6201 ce=3.2856 kl=3.7634 lr=9.07e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  200/532 loss=2.9161 ce=2.2210 kl=3.2140 lr=8.67e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  300/532 loss=3.6101 ce=2.8883 kl=3.9195 lr=8.22e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  400/532 loss=3.2595 ce=2.2012 kl=3.7130 lr=7.73e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  500/532 loss=2.9008 ce=2.1758 kl=3.2115 lr=7.19e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 1: student@1=56.60 teacher@1=78.88 (971.6s)
+  [ft] ep 2 it  100/532 loss=2.9994 ce=2.4317 kl=3.2427 lr=6.42e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  200/532 loss=3.1891 ce=2.1131 kl=3.6502 lr=5.82e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  300/532 loss=3.3238 ce=2.4804 kl=3.6853 lr=5.20e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  400/532 loss=3.1263 ce=2.5844 kl=3.3585 lr=4.58e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  500/532 loss=3.1330 ce=2.4947 kl=3.4065 lr=3.96e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 2: student@1=61.25 teacher@1=78.88 (1008.2s)
+  [ft] ep 3 it  100/532 loss=2.7958 ce=1.9720 kl=3.1489 lr=3.18e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  200/532 loss=3.4240 ce=2.5522 kl=3.7976 lr=2.62e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  300/532 loss=3.0462 ce=2.4501 kl=3.3017 lr=2.09e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  400/532 loss=3.0337 ce=2.3871 kl=3.3109 lr=1.61e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  500/532 loss=2.7186 ce=2.0610 kl=3.0005 lr=1.18e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 3: student@1=60.08 teacher@1=78.88 (1012.7s)
+  [ft] ep 4 it  100/532 loss=3.2949 ce=2.3439 kl=3.7025 lr=7.03e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  200/532 loss=3.0186 ce=2.5076 kl=3.2377 lr=4.20e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  300/532 loss=2.8462 ce=2.1146 kl=3.1597 lr=2.06e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  400/532 loss=3.0019 ce=2.2712 kl=3.3151 lr=6.71e-07 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  500/532 loss=3.1492 ce=2.3637 kl=3.4858 lr=3.95e-08 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 4: student@1=62.51 teacher@1=78.88 (1003.6s)
+final (test): {'student_top1': 61.60509490966797, 'student_top5': 92.89171600341797, 'teacher_top1': 79.1082763671875, 'teacher_top5': 95.49044036865234, 'agreement': 51.31209945678711, 'n': 3925, 'student_top1_restricted': 61.60509490966797, 'teacher_top1_restricted': 99.15923309326172, 'agreement_restricted': 61.68152618408203, 'n_classes_restricted': 10, 'split': 'test'}
+
+=== Temporal sparsity profile ===
+global firing rate : 0.0704   (sparsity 92.96%)
+rate per time step : t0=0.0307  t1=0.0853  t2=0.0868  t3=0.0788
+layer                                               rate   per-step
+encoder.input_lif                                 0.0954   0.054 0.113 0.101 0.114
+blocks.0.attn_lif_in                              0.0408   0.025 0.041 0.048 0.050
+blocks.0.attn.q_lif                               0.1501   0.076 0.155 0.176 0.194
+blocks.0.attn.k_lif                               0.0994   0.026 0.094 0.128 0.149
+blocks.0.attn.v_lif                               0.0421   0.016 0.034 0.053 0.066
+blocks.0.attn.attn_lif                            0.4402   0.084 0.339 0.606 0.732
+blocks.0.mlp_lif_in                               0.1293   0.114 0.115 0.128 0.159
+blocks.0.mlp.lif                                  0.0345   0.017 0.035 0.037 0.049
+blocks.1.attn_lif_in                              0.0843   0.067 0.086 0.088 0.096
+blocks.1.attn.q_lif                               0.1068   0.029 0.120 0.139 0.139
+blocks.1.attn.k_lif                               0.0837   0.021 0.087 0.111 0.116
+blocks.1.attn.v_lif                               0.0411   0.021 0.039 0.046 0.059
+blocks.1.attn.attn_lif                            0.2923   0.010 0.210 0.418 0.532
+blocks.1.mlp_lif_in                               0.1364   0.129 0.114 0.140 0.163
+blocks.1.mlp.lif                                  0.0317   0.007 0.024 0.040 0.056
+blocks.2.attn_lif_in                              0.0839   0.072 0.087 0.086 0.090
+blocks.2.attn.q_lif                               0.0891   0.017 0.100 0.118 0.122
+blocks.2.attn.k_lif                               0.0711   0.034 0.084 0.084 0.083
+blocks.2.attn.v_lif                               0.0387   0.011 0.048 0.046 0.049
+blocks.2.attn.attn_lif                            0.2695   0.002 0.267 0.377 0.432
+blocks.2.mlp_lif_in                               0.1443   0.122 0.150 0.169 0.136
+blocks.2.mlp.lif                                  0.0298   0.003 0.025 0.045 0.046
+blocks.3.attn_lif_in                              0.0856   0.076 0.096 0.089 0.081
+blocks.3.attn.q_lif                               0.0788   0.021 0.107 0.096 0.090
+blocks.3.attn.k_lif                               0.0668   0.039 0.085 0.074 0.070
+blocks.3.attn.v_lif                               0.0355   0.012 0.062 0.040 0.028
+blocks.3.attn.attn_lif                            0.2820   0.006 0.386 0.419 0.316
+blocks.3.mlp_lif_in                               0.1427   0.107 0.178 0.179 0.106
+blocks.3.mlp.lif                                  0.0265   0.001 0.027 0.049 0.029
+blocks.4.attn_lif_in                              0.0899   0.074 0.115 0.096 0.075
+blocks.4.attn.q_lif                               0.0562   0.018 0.079 0.068 0.059
+blocks.4.attn.k_lif                               0.0577   0.053 0.070 0.052 0.056
+blocks.4.attn.v_lif                               0.0391   0.009 0.082 0.042 0.023
+blocks.4.attn.attn_lif                            0.1824   0.002 0.294 0.265 0.168
+blocks.4.mlp_lif_in                               0.1414   0.076 0.199 0.184 0.107
+blocks.4.mlp.lif                                  0.0261   0.000 0.033 0.049 0.022
+blocks.5.attn_lif_in                              0.0908   0.070 0.127 0.099 0.067
+blocks.5.attn.q_lif                               0.0639   0.025 0.092 0.072 0.067
+blocks.5.attn.k_lif                               0.0561   0.046 0.050 0.057 0.072
+blocks.5.attn.v_lif                               0.0353   0.009 0.072 0.038 0.023
+blocks.5.attn.attn_lif                            0.1761   0.001 0.295 0.253 0.156
+blocks.5.mlp_lif_in                               0.1399   0.108 0.207 0.161 0.083
+blocks.5.mlp.lif                                  0.0215   0.001 0.035 0.038 0.011
+blocks.6.attn_lif_in                              0.1037   0.080 0.144 0.116 0.075
+blocks.6.attn.q_lif                               0.0473   0.017 0.068 0.053 0.051
+blocks.6.attn.k_lif                               0.0504   0.032 0.050 0.051 0.069
+blocks.6.attn.v_lif                               0.0362   0.006 0.081 0.039 0.019
+blocks.6.attn.attn_lif                            0.1200   0.001 0.263 0.150 0.066
+blocks.6.mlp_lif_in                               0.1427   0.086 0.218 0.170 0.098
+blocks.6.mlp.lif                                  0.0185   0.001 0.031 0.031 0.011
+blocks.7.attn_lif_in                              0.1075   0.071 0.163 0.120 0.076
+blocks.7.attn.q_lif                               0.0433   0.023 0.053 0.049 0.049
+blocks.7.attn.k_lif                               0.0487   0.039 0.050 0.046 0.060
+blocks.7.attn.v_lif                               0.0370   0.018 0.070 0.038 0.022
+blocks.7.attn.attn_lif                            0.0743   0.002 0.170 0.086 0.039
+blocks.7.mlp_lif_in                               0.1480   0.102 0.225 0.162 0.102
+blocks.7.mlp.lif                                  0.0146   0.001 0.027 0.021 0.009
+blocks.8.attn_lif_in                              0.1271   0.085 0.187 0.141 0.095
+blocks.8.attn.q_lif                               0.0473   0.026 0.048 0.056 0.060
+blocks.8.attn.k_lif                               0.0480   0.025 0.047 0.053 0.066
+blocks.8.attn.v_lif                               0.0343   0.013 0.059 0.039 0.026
+blocks.8.attn.attn_lif                            0.0751   0.001 0.068 0.117 0.115
+blocks.8.mlp_lif_in                               0.1531   0.117 0.217 0.163 0.115
+blocks.8.mlp.lif                                  0.0114   0.001 0.016 0.016 0.012
+blocks.9.attn_lif_in                              0.1444   0.109 0.202 0.155 0.112
+blocks.9.attn.q_lif                               0.0510   0.025 0.050 0.060 0.069
+blocks.9.attn.k_lif                               0.0494   0.028 0.049 0.053 0.067
+blocks.9.attn.v_lif                               0.0352   0.011 0.060 0.039 0.031
+blocks.9.attn.attn_lif                            0.1134   0.001 0.117 0.154 0.182
+blocks.9.mlp_lif_in                               0.1736   0.141 0.236 0.185 0.133
+blocks.9.mlp.lif                                  0.0115   0.001 0.017 0.017 0.011
+blocks.10.attn_lif_in                             0.1646   0.136 0.221 0.175 0.126
+blocks.10.attn.q_lif                              0.0647   0.044 0.063 0.066 0.086
+blocks.10.attn.k_lif                              0.0669   0.036 0.068 0.074 0.089
+blocks.10.attn.v_lif                              0.0333   0.011 0.044 0.041 0.037
+blocks.10.attn.attn_lif                           0.0932   0.001 0.076 0.121 0.176
+blocks.10.mlp_lif_in                              0.1962   0.174 0.240 0.208 0.163
+blocks.10.mlp.lif                                 0.0101   0.001 0.009 0.015 0.015
+blocks.11.attn_lif_in                             0.1851   0.155 0.234 0.195 0.156
+blocks.11.attn.q_lif                              0.0505   0.022 0.040 0.057 0.083
+blocks.11.attn.k_lif                              0.0662   0.039 0.060 0.072 0.094
+blocks.11.attn.v_lif                              0.0353   0.013 0.047 0.043 0.038
+blocks.11.attn.attn_lif                           0.0658   0.001 0.029 0.087 0.146
+blocks.11.mlp_lif_in                              0.2049   0.166 0.244 0.212 0.197
+blocks.11.mlp.lif                                 0.0128   0.002 0.010 0.016 0.024
+student: 29.7 M MAC + 435.7 M AC -> 0.529 mJ/img
+teacher: 1253.7 M MAC -> 5.767 mJ/img   (ratio x10.91)
+
+saved to /Users/bibi/Documents/vit2snn/runs/series_v2/seed0/p1_ft05

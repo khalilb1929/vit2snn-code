@@ -1,0 +1,289 @@
+device=mps | T=4 | attn=ssa | surrogate=atan
+teacher params=5,717,416 | student params=5,803,432 | W_proj params=0
+
+=== Progressive distillation: 13 stages ===
+  [stage  0] ep 0 it  100/591 mse=0.38434 lr=9.97e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  200/591 mse=0.29488 lr=9.61e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  300/591 mse=0.23068 lr=8.90e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  400/591 mse=0.22509 lr=7.89e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  500/591 mse=0.18359 lr=6.66e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  100/591 mse=0.16171 lr=4.02e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  200/591 mse=0.18594 lr=2.70e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  300/591 mse=0.15961 lr=1.57e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  400/591 mse=0.17706 lr=7.00e-05 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  500/591 mse=0.14087 lr=1.64e-05 | mps alloc=69MiB driver=1165MiB
+[stage  0] train_mse=0.15395 val_mse=0.14797 (46.1s) | mps alloc=44MiB driver=59MiB
+  [stage  1] ep 0 it  100/591 mse=0.69547 lr=9.97e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  200/591 mse=0.56362 lr=9.61e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  300/591 mse=0.48552 lr=8.90e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  400/591 mse=0.37571 lr=7.89e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  500/591 mse=0.38636 lr=6.66e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  100/591 mse=0.38313 lr=4.02e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  200/591 mse=0.31557 lr=2.70e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  300/591 mse=0.33016 lr=1.57e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  400/591 mse=0.33455 lr=7.00e-05 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  500/591 mse=0.33381 lr=1.64e-05 | mps alloc=86MiB driver=1227MiB
+[stage  1] train_mse=0.35330 val_mse=0.34948 (171.4s) | mps alloc=44MiB driver=67MiB
+  [stage  2] ep 0 it  100/591 mse=0.51304 lr=9.97e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  200/591 mse=0.46052 lr=9.61e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  300/591 mse=0.41287 lr=8.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  400/591 mse=0.38932 lr=7.89e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  500/591 mse=0.37340 lr=6.66e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  100/591 mse=0.36320 lr=4.02e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  200/591 mse=0.35230 lr=2.70e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  300/591 mse=0.36222 lr=1.57e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  400/591 mse=0.34963 lr=7.00e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  500/591 mse=0.34505 lr=1.64e-05 | mps alloc=84MiB driver=1227MiB
+[stage  2] train_mse=0.35643 val_mse=0.35603 (236.4s) | mps alloc=44MiB driver=67MiB
+  [stage  3] ep 0 it  100/591 mse=0.42235 lr=9.97e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  200/591 mse=0.39398 lr=9.61e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  300/591 mse=0.36978 lr=8.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  400/591 mse=0.33152 lr=7.89e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  500/591 mse=0.33416 lr=6.66e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  100/591 mse=0.31498 lr=4.02e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  200/591 mse=0.30818 lr=2.70e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  300/591 mse=0.30606 lr=1.57e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  400/591 mse=0.31454 lr=7.00e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  500/591 mse=0.30392 lr=1.64e-05 | mps alloc=84MiB driver=1227MiB
+[stage  3] train_mse=0.31749 val_mse=0.31810 (307.9s) | mps alloc=44MiB driver=67MiB
+  [stage  4] ep 0 it  100/591 mse=0.42955 lr=9.97e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  200/591 mse=0.39140 lr=9.61e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  300/591 mse=0.36855 lr=8.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  400/591 mse=0.35758 lr=7.89e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  500/591 mse=0.34350 lr=6.66e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  100/591 mse=0.34318 lr=4.02e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  200/591 mse=0.33849 lr=2.70e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  300/591 mse=0.33783 lr=1.57e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  400/591 mse=0.33104 lr=7.00e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  500/591 mse=0.31147 lr=1.64e-05 | mps alloc=84MiB driver=1227MiB
+[stage  4] train_mse=0.33611 val_mse=0.33700 (356.7s) | mps alloc=44MiB driver=67MiB
+  [stage  5] ep 0 it  100/591 mse=0.36129 lr=9.97e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  200/591 mse=0.34274 lr=9.61e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  300/591 mse=0.32999 lr=8.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  400/591 mse=0.31898 lr=7.89e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  500/591 mse=0.32938 lr=6.66e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  100/591 mse=0.32206 lr=4.02e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  200/591 mse=0.30995 lr=2.70e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  300/591 mse=0.30967 lr=1.57e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  400/591 mse=0.30390 lr=7.00e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  500/591 mse=0.31005 lr=1.64e-05 | mps alloc=84MiB driver=1227MiB
+[stage  5] train_mse=0.31199 val_mse=0.31334 (417.1s) | mps alloc=44MiB driver=67MiB
+  [stage  6] ep 0 it  100/591 mse=0.46594 lr=9.97e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  200/591 mse=0.42316 lr=9.61e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  300/591 mse=0.43454 lr=8.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  400/591 mse=0.41258 lr=7.89e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  500/591 mse=0.39648 lr=6.66e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  100/591 mse=0.39187 lr=4.02e-04 | mps alloc=84MiB driver=1227MiB
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 28 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+device=mps | T=4 | attn=ssa | surrogate=atan
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+teacher params=5,717,416 | student params=5,803,432 | W_proj params=0
+resumed after stage 5
+
+=== Progressive distillation: 13 stages ===
+  [stage  6] ep 0 it  100/591 mse=0.46814 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 0 it  200/591 mse=0.43417 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 0 it  300/591 mse=0.40649 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 0 it  400/591 mse=0.40964 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 0 it  500/591 mse=0.40908 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 1 it  100/591 mse=0.39999 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 1 it  200/591 mse=0.40433 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 1 it  300/591 mse=0.39355 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 1 it  400/591 mse=0.41109 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage  6] ep 1 it  500/591 mse=0.40256 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage  6] train_mse=0.39526 val_mse=0.40112 (483.1s) | mps alloc=67MiB driver=91MiB
+  [stage  7] ep 0 it  100/591 mse=0.55598 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 0 it  200/591 mse=0.50851 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 0 it  300/591 mse=0.50519 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 0 it  400/591 mse=0.47510 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 0 it  500/591 mse=0.48869 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 1 it  100/591 mse=0.46858 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 1 it  200/591 mse=0.44520 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 1 it  300/591 mse=0.46185 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 1 it  400/591 mse=0.46502 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage  7] ep 1 it  500/591 mse=0.48222 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage  7] train_mse=0.46934 val_mse=0.47950 (536.7s) | mps alloc=67MiB driver=91MiB
+  [stage  8] ep 0 it  100/591 mse=20.63091 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 0 it  200/591 mse=20.99960 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 0 it  300/591 mse=20.60431 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 0 it  400/591 mse=19.38282 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 0 it  500/591 mse=21.84207 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 1 it  100/591 mse=18.94628 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 1 it  200/591 mse=19.69970 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 1 it  300/591 mse=19.25722 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 1 it  400/591 mse=21.03472 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage  8] ep 1 it  500/591 mse=20.55342 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage  8] train_mse=19.95626 val_mse=22.05869 (620.0s) | mps alloc=67MiB driver=91MiB
+  [stage  9] ep 0 it  100/591 mse=20.38631 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 0 it  200/591 mse=19.44976 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 0 it  300/591 mse=18.56258 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 0 it  400/591 mse=17.54951 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 0 it  500/591 mse=21.32108 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 1 it  100/591 mse=18.52361 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 1 it  200/591 mse=18.53147 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 1 it  300/591 mse=18.22775 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 1 it  400/591 mse=20.29613 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage  9] ep 1 it  500/591 mse=18.75848 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage  9] train_mse=19.02992 val_mse=21.00743 (691.8s) | mps alloc=67MiB driver=91MiB
+  [stage 10] ep 0 it  100/591 mse=18.82884 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 0 it  200/591 mse=18.07568 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 0 it  300/591 mse=17.76914 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 0 it  400/591 mse=18.78814 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 0 it  500/591 mse=19.72344 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 1 it  100/591 mse=17.01953 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 1 it  200/591 mse=17.52134 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 1 it  300/591 mse=19.20335 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 1 it  400/591 mse=17.75850 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage 10] ep 1 it  500/591 mse=16.67847 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage 10] train_mse=18.20839 val_mse=20.01423 (786.1s) | mps alloc=67MiB driver=91MiB
+  [stage 11] ep 0 it  100/591 mse=17.66414 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 0 it  200/591 mse=16.86835 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 0 it  300/591 mse=15.67517 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 0 it  400/591 mse=15.34112 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 0 it  500/591 mse=17.56896 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 1 it  100/591 mse=18.01583 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 1 it  200/591 mse=16.60083 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 1 it  300/591 mse=17.88882 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 1 it  400/591 mse=16.81007 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage 11] ep 1 it  500/591 mse=17.61375 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage 11] train_mse=17.32145 val_mse=19.09707 (890.8s) | mps alloc=67MiB driver=91MiB
+  [stage 12] ep 0 it  100/591 mse=17.18188 lr=9.97e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 0 it  200/591 mse=15.54058 lr=9.61e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 0 it  300/591 mse=18.86175 lr=8.90e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 0 it  400/591 mse=17.21519 lr=7.89e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 0 it  500/591 mse=17.01091 lr=6.66e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 1 it  100/591 mse=15.13382 lr=4.02e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 1 it  200/591 mse=16.35004 lr=2.70e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 1 it  300/591 mse=15.85913 lr=1.57e-04 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 1 it  400/591 mse=15.99592 lr=7.00e-05 | mps alloc=107MiB driver=1243MiB
+  [stage 12] ep 1 it  500/591 mse=15.79805 lr=1.64e-05 | mps alloc=107MiB driver=1243MiB
+[stage 12] train_mse=16.48410 val_mse=18.25325 (1720.6s) | mps alloc=67MiB driver=91MiB
+after distillation: {'student_top1': 0.6369426846504211, 'student_top5': 2.165605068206787, 'teacher_top1': 79.1082763671875, 'teacher_top5': 95.49044036865234, 'agreement': 0.662420392036438, 'n': 3925}
+
+=== Global fine-tuning (CE + KL) ===
+  [ft] ep 0 it  100/591 loss=5.0093 ce=5.4716 kl=4.8111 lr=6.89e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 0 it  200/591 loss=4.1603 ce=3.2909 kl=4.5329 lr=9.99e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 0 it  300/591 loss=4.0011 ce=2.8569 kl=4.4915 lr=9.93e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 0 it  400/591 loss=3.3947 ce=2.4609 kl=3.7949 lr=9.80e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 0 it  500/591 loss=3.5497 ce=2.8551 kl=3.8475 lr=9.62e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 0: student@1=49.78 teacher@1=79.11 agree=41.71
+  [ft] ep 1 it  100/591 loss=3.2154 ce=2.3295 kl=3.5951 lr=9.10e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  200/591 loss=3.6962 ce=2.9163 kl=4.0304 lr=8.76e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  300/591 loss=3.2321 ce=2.1921 kl=3.6778 lr=8.37e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  400/591 loss=3.2368 ce=2.5483 kl=3.5318 lr=7.94e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 1 it  500/591 loss=3.3446 ce=2.4649 kl=3.7217 lr=7.47e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 1: student@1=59.13 teacher@1=79.11 agree=49.17
+  [ft] ep 2 it  100/591 loss=3.7500 ce=3.0140 kl=4.0654 lr=6.49e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  200/591 loss=3.9588 ce=2.8922 kl=4.4160 lr=5.94e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  300/591 loss=3.1861 ce=2.7592 kl=3.3691 lr=5.39e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  400/591 loss=2.8630 ce=2.0999 kl=3.1901 lr=4.83e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 2 it  500/591 loss=3.5929 ce=3.2142 kl=3.7552 lr=4.28e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 2: student@1=61.61 teacher@1=79.11 agree=51.26
+  [ft] ep 3 it  100/591 loss=3.3722 ce=3.1835 kl=3.4531 lr=3.24e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  200/591 loss=2.7716 ce=2.1270 kl=3.0478 lr=2.73e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  300/591 loss=3.6644 ce=3.1936 kl=3.8662 lr=2.25e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  400/591 loss=3.8584 ce=3.2625 kl=4.1138 lr=1.80e-05 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 3 it  500/591 loss=3.6053 ce=3.0013 kl=3.8641 lr=1.39e-05 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 3: student@1=62.62 teacher@1=79.11 agree=51.82
+  [ft] ep 4 it  100/591 loss=3.0095 ce=2.6474 kl=3.1647 lr=7.37e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  200/591 loss=3.4405 ce=2.8177 kl=3.7074 lr=4.72e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  300/591 loss=3.0359 ce=2.0371 kl=3.4640 lr=2.64e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  400/591 loss=3.1830 ce=2.6953 kl=3.3920 lr=1.15e-06 | mps alloc=142MiB driver=4844MiB
+  [ft] ep 4 it  500/591 loss=2.9863 ce=2.4961 kl=3.1964 lr=2.64e-07 | mps alloc=142MiB driver=4844MiB
+[ft] epoch 4: student@1=63.67 teacher@1=79.11 agree=52.92
+final: {'student_top1': 63.66878890991211, 'student_top5': 93.47770690917969, 'teacher_top1': 79.1082763671875, 'teacher_top5': 95.49044036865234, 'agreement': 52.91720199584961, 'n': 3925}
+
+=== Temporal sparsity profile ===
+global firing rate : 0.0706   (sparsity 92.94%)
+rate per time step : t0=0.0310  t1=0.0809  t2=0.0879  t3=0.0826
+layer                                               rate   per-step
+encoder.input_lif                                 0.1003   0.058 0.118 0.106 0.119
+blocks.0.attn_lif_in                              0.0403   0.024 0.040 0.047 0.049
+blocks.0.attn.q_lif                               0.1532   0.080 0.157 0.181 0.196
+blocks.0.attn.k_lif                               0.1015   0.029 0.096 0.131 0.150
+blocks.0.attn.v_lif                               0.0446   0.018 0.036 0.056 0.068
+blocks.0.attn.attn_lif                            0.4393   0.100 0.323 0.610 0.724
+blocks.0.mlp_lif_in                               0.1338   0.121 0.125 0.131 0.158
+blocks.0.mlp.lif                                  0.0363   0.019 0.038 0.038 0.050
+blocks.1.attn_lif_in                              0.0814   0.064 0.086 0.084 0.090
+blocks.1.attn.q_lif                               0.1081   0.036 0.121 0.138 0.136
+blocks.1.attn.k_lif                               0.0820   0.021 0.083 0.110 0.115
+blocks.1.attn.v_lif                               0.0429   0.019 0.041 0.049 0.062
+blocks.1.attn.attn_lif                            0.3088   0.013 0.227 0.440 0.555
+blocks.1.mlp_lif_in                               0.1348   0.132 0.109 0.133 0.166
+blocks.1.mlp.lif                                  0.0320   0.008 0.024 0.038 0.058
+blocks.2.attn_lif_in                              0.0802   0.073 0.080 0.082 0.087
+blocks.2.attn.q_lif                               0.0896   0.017 0.096 0.119 0.126
+blocks.2.attn.k_lif                               0.0708   0.031 0.083 0.085 0.084
+blocks.2.attn.v_lif                               0.0391   0.012 0.045 0.046 0.052
+blocks.2.attn.attn_lif                            0.2773   0.002 0.260 0.387 0.461
+blocks.2.mlp_lif_in                               0.1417   0.117 0.140 0.166 0.143
+blocks.2.mlp.lif                                  0.0325   0.004 0.026 0.047 0.052
+blocks.3.attn_lif_in                              0.0777   0.067 0.082 0.082 0.080
+blocks.3.attn.q_lif                               0.0846   0.026 0.116 0.104 0.093
+blocks.3.attn.k_lif                               0.0693   0.039 0.094 0.076 0.069
+blocks.3.attn.v_lif                               0.0371   0.012 0.062 0.040 0.033
+blocks.3.attn.attn_lif                            0.3105   0.002 0.414 0.456 0.369
+blocks.3.mlp_lif_in                               0.1463   0.106 0.180 0.189 0.111
+blocks.3.mlp.lif                                  0.0300   0.001 0.029 0.054 0.036
+blocks.4.attn_lif_in                              0.0859   0.071 0.110 0.087 0.075
+blocks.4.attn.q_lif                               0.0579   0.018 0.087 0.064 0.063
+blocks.4.attn.k_lif                               0.0590   0.052 0.068 0.053 0.063
+blocks.4.attn.v_lif                               0.0405   0.009 0.089 0.039 0.025
+blocks.4.attn.attn_lif                            0.2009   0.005 0.325 0.275 0.198
+blocks.4.mlp_lif_in                               0.1476   0.087 0.207 0.190 0.107
+blocks.4.mlp.lif                                  0.0297   0.001 0.036 0.056 0.026
+blocks.5.attn_lif_in                              0.0855   0.069 0.117 0.089 0.068
+blocks.5.attn.q_lif                               0.0634   0.024 0.091 0.070 0.069
+blocks.5.attn.k_lif                               0.0564   0.051 0.050 0.056 0.069
+blocks.5.attn.v_lif                               0.0373   0.011 0.075 0.037 0.026
+blocks.5.attn.attn_lif                            0.1793   0.002 0.240 0.267 0.209
+blocks.5.mlp_lif_in                               0.1428   0.122 0.208 0.158 0.083
+blocks.5.mlp.lif                                  0.0253   0.002 0.039 0.045 0.015
+blocks.6.attn_lif_in                              0.0989   0.084 0.130 0.107 0.075
+blocks.6.attn.q_lif                               0.0484   0.018 0.065 0.055 0.055
+blocks.6.attn.k_lif                               0.0510   0.030 0.048 0.055 0.071
+blocks.6.attn.v_lif                               0.0363   0.011 0.078 0.035 0.021
+blocks.6.attn.attn_lif                            0.1091   0.001 0.204 0.141 0.090
+blocks.6.mlp_lif_in                               0.1455   0.095 0.202 0.177 0.107
+blocks.6.mlp.lif                                  0.0242   0.001 0.036 0.042 0.018
+blocks.7.attn_lif_in                              0.1024   0.081 0.140 0.113 0.076
+blocks.7.attn.q_lif                               0.0427   0.017 0.046 0.053 0.055
+blocks.7.attn.k_lif                               0.0508   0.053 0.048 0.046 0.057
+blocks.7.attn.v_lif                               0.0374   0.028 0.058 0.037 0.027
+blocks.7.attn.attn_lif                            0.0659   0.003 0.133 0.081 0.048
+blocks.7.mlp_lif_in                               0.1453   0.099 0.209 0.170 0.103
+blocks.7.mlp.lif                                  0.0189   0.001 0.032 0.028 0.014
+blocks.8.attn_lif_in                              0.1167   0.089 0.155 0.131 0.092
+blocks.8.attn.q_lif                               0.0447   0.021 0.043 0.055 0.060
+blocks.8.attn.k_lif                               0.0491   0.033 0.050 0.052 0.062
+blocks.8.attn.v_lif                               0.0331   0.016 0.044 0.041 0.031
+blocks.8.attn.attn_lif                            0.0588   0.001 0.030 0.093 0.112
+blocks.8.mlp_lif_in                               0.1396   0.112 0.175 0.152 0.119
+blocks.8.mlp.lif                                  0.0110   0.001 0.012 0.015 0.015
+blocks.9.attn_lif_in                              0.1316   0.105 0.163 0.146 0.112
+blocks.9.attn.q_lif                               0.0495   0.021 0.051 0.060 0.066
+blocks.9.attn.k_lif                               0.0474   0.029 0.050 0.050 0.061
+blocks.9.attn.v_lif                               0.0339   0.012 0.049 0.040 0.035
+blocks.9.attn.attn_lif                            0.0850   0.000 0.105 0.112 0.122
+blocks.9.mlp_lif_in                               0.1606   0.138 0.193 0.174 0.138
+blocks.9.mlp.lif                                  0.0115   0.001 0.013 0.016 0.016
+blocks.10.attn_lif_in                             0.1494   0.123 0.182 0.164 0.129
+blocks.10.attn.q_lif                              0.0640   0.027 0.072 0.077 0.080
+blocks.10.attn.k_lif                              0.0641   0.058 0.056 0.064 0.078
+blocks.10.attn.v_lif                              0.0344   0.013 0.044 0.044 0.037
+blocks.10.attn.attn_lif                           0.1088   0.001 0.080 0.158 0.197
+blocks.10.mlp_lif_in                              0.1876   0.155 0.204 0.210 0.182
+blocks.10.mlp.lif                                 0.0116   0.001 0.006 0.017 0.022
+blocks.11.attn_lif_in                             0.1733   0.142 0.196 0.191 0.164
+blocks.11.attn.q_lif                              0.0488   0.019 0.037 0.062 0.078
+blocks.11.attn.k_lif                              0.0656   0.036 0.062 0.074 0.090
+blocks.11.attn.v_lif                              0.0348   0.012 0.043 0.042 0.042
+blocks.11.attn.attn_lif                           0.0555   0.000 0.022 0.069 0.131
+blocks.11.mlp_lif_in                              0.1892   0.141 0.206 0.204 0.206
+blocks.11.mlp.lif                                 0.0126   0.002 0.008 0.016 0.025
+student: 29.7 M MAC + 427.9 M AC -> 0.522 mJ/img
+teacher: 1253.7 M MAC -> 5.767 mJ/img   (ratio x11.06)
+
+saved to /Users/bibi/Library/Application Support/Claude/scratch-workspaces/3456a6d4-4e0e-4fe2-8fee-c67ffa090b94/93231e58-8668-4bcb-aa1c-9e2779c15fe5/scratch-2026-09-24-afc845/runs/imagenette_ssa

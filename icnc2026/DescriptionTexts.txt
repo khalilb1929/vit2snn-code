@@ -1,0 +1,1 @@
+1 (Fig. 1) - Two line plots over stages 0 to 12. Left, on a log scale, the absolute MSE stays between 0.15 and 0.48 up to stage 7 and jumps to about 18 to 22 from stage 8. Right, the relative error rises from 0.22 at stage 0 to above 1 for stages 3 to 7, then decreases from 0.91 to 0.71 for stages 8 to 12; a dashed line marks the value 1.

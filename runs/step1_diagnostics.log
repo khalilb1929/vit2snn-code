@@ -1,0 +1,52 @@
+cached 3925 val / 262 val-subset / 632 train-calibration images in 10s
+
+=== A. Inference-time T sweep (trained with T=4) ===
+  phase1+phase2      T=1: 1000-way   9.04%  10-way   9.04%  rate 0.0310
+  phase1+phase2      T=2: 1000-way  32.15%  10-way  32.15%  rate 0.0560
+  phase1+phase2      T=4: 1000-way  62.78%  10-way  62.78%  rate 0.0706
+  phase1+phase2      T=8: 1000-way  58.75%  10-way  58.75%  rate 0.0724
+  phase2_only_5ep    T=1: 1000-way   8.92%  10-way   8.92%  rate 0.0427
+  phase2_only_5ep    T=2: 1000-way  23.87%  10-way  23.87%  rate 0.0630
+  phase2_only_5ep    T=4: 1000-way  49.07%  10-way  49.07%  rate 0.0906
+  phase2_only_5ep    T=8: 1000-way  44.23%  10-way  44.23%  rate 0.1140
+  phase2_only_12ep   T=1: 1000-way   9.30%  10-way   9.30%  rate 0.0472
+  phase2_only_12ep   T=2: 1000-way  37.99%  10-way  37.99%  rate 0.0660
+  phase2_only_12ep   T=4: 1000-way  58.75%  10-way  58.75%  rate 0.0910
+  phase2_only_12ep   T=8: 1000-way  57.58%  10-way  57.58%  rate 0.1101
+
+=== B. Relative hidden-state error rho_l (val subset) ===
+  phase1_only        rho_all: 0.22 0.60 0.85 1.15 1.17 1.19 1.16 1.11 0.91 0.85 0.80 0.75 0.71
+                     rho_cls: n/a 163.94 9.66 15.69 7.24 4.47 4.71 4.22 4.35 3.08 2.00 1.61 1.47
+  phase1+phase2      rho_all: 0.24 0.76 1.18 1.76 1.84 1.95 1.86 1.71 0.94 0.90 0.88 0.85 0.84
+                     rho_cls: n/a 587.31 40.04 99.23 49.15 34.44 38.71 31.89 25.01 17.88 12.57 8.11 8.00
+  phase2_only_5ep    rho_all: 0.73 2.92 5.36 9.63 10.97 13.25 11.74 10.87 1.18 1.21 1.25 1.28 1.36
+                     rho_cls: n/a 2160.21 192.26 457.80 266.86 206.83 243.29 235.12 175.97 102.85 52.29 30.54 25.49
+  phase2_only_12ep   rho_all: 0.75 2.95 5.46 10.03 11.57 14.12 12.58 11.92 1.21 1.25 1.29 1.34 1.43
+                     rho_cls: n/a 2718.36 319.26 872.79 516.98 406.73 501.07 536.14 412.18 253.14 136.30 86.96 76.26
+
+=== C. Teacher channel interventions (calibrated on train subset) ===
+  baseline: 1000-way 79.11%  10-way 99.16%
+
+  stage 8: top channel 41 (share 0.939, max|h| 587.0, CLS share 0.000, top-1% tokens share 0.633), 2nd 39, tau=19.76, random [21, 134, 96, 177, 61]
+    mean          ch  41: 1000-way  64.79%  10-way  97.99%  flip1000  29.0%  flip10   2.0%  KL 0.649  |dh|/|h| tok 0.779 glob 0.956
+    clip          ch  41: 1000-way  62.24%  10-way  97.15%  flip1000  32.3%  flip10   2.6%  KL 0.836  |dh|/|h| tok 0.019 glob 0.929
+    noise_matched ch  41: 1000-way  64.15%  10-way  97.45%  flip1000  27.6%  flip10   2.4%  KL 0.574  |dh|/|h| tok 0.779 glob 0.956
+    mean          ch  39: 1000-way  76.03%  10-way  98.65%  flip1000  13.1%  flip10   1.0%  KL 0.156  |dh|/|h| tok 0.110 glob 0.070
+    mean          ch  21: 1000-way  79.31%  10-way  99.11%  flip1000   3.1%  flip10   0.1%  KL 0.006  |dh|/|h| tok 0.055 glob 0.023
+    mean          ch 134: 1000-way  78.88%  10-way  99.18%  flip1000   1.7%  flip10   0.0%  KL 0.003  |dh|/|h| tok 0.042 glob 0.010
+    mean          ch  96: 1000-way  78.98%  10-way  99.18%  flip1000   1.5%  flip10   0.1%  KL 0.003  |dh|/|h| tok 0.045 glob 0.015
+    mean          ch 177: 1000-way  79.01%  10-way  99.16%  flip1000   1.5%  flip10   0.1%  KL 0.003  |dh|/|h| tok 0.053 glob 0.012
+    mean          ch  61: 1000-way  78.96%  10-way  99.08%  flip1000   1.8%  flip10   0.1%  KL 0.003  |dh|/|h| tok 0.043 glob 0.010
+
+  stage 12: top channel 41 (share 0.904, max|h| 583.2, CLS share 0.000, top-1% tokens share 0.628), 2nd 39, tau=21.50, random [32, 38, 138, 134, 84]
+    mean          ch  41: 1000-way  78.88%  10-way  99.18%  flip1000   0.6%  flip10   0.0%  KL 0.001  |dh|/|h| tok 0.490 glob 0.950
+    clip          ch  41: 1000-way  79.11%  10-way  99.16%  flip1000   0.0%  flip10   0.0%  KL 0.000  |dh|/|h| tok 0.019 glob 0.903
+    noise_matched ch  41: 1000-way  78.70%  10-way  99.16%  flip1000   2.8%  flip10   0.2%  KL 0.010  |dh|/|h| tok 0.490 glob 0.950
+    mean          ch  39: 1000-way  80.28%  10-way  99.18%  flip1000   3.9%  flip10   0.2%  KL 0.012  |dh|/|h| tok 0.077 glob 0.070
+    mean          ch  32: 1000-way  79.21%  10-way  99.16%  flip1000   1.0%  flip10   0.1%  KL 0.001  |dh|/|h| tok 0.042 glob 0.015
+    mean          ch  38: 1000-way  78.83%  10-way  99.21%  flip1000   1.0%  flip10   0.1%  KL 0.002  |dh|/|h| tok 0.053 glob 0.020
+    mean          ch 138: 1000-way  78.93%  10-way  99.18%  flip1000   1.5%  flip10   0.2%  KL 0.002  |dh|/|h| tok 0.044 glob 0.016
+    mean          ch 134: 1000-way  77.30%  10-way  99.03%  flip1000   3.9%  flip10   0.3%  KL 0.016  |dh|/|h| tok 0.046 glob 0.016
+    mean          ch  84: 1000-way  79.34%  10-way  99.18%  flip1000   1.4%  flip10   0.1%  KL 0.002  |dh|/|h| tok 0.049 glob 0.028
+
+saved runs/step1_diagnostics.json

@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+teacher {'n': 3925, 'top1_inside_10_classes': 3106, 'frac_inside': 0.7913375796178344, 'correct_1000way': 3105, 'correct_10way': 3892}
+seed0/nop1_ft05 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 1897, 'correct_10way': 1897}
+seed0/nop1_ft12 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2362, 'correct_10way': 2362}
+seed0/p1_ft05 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2418, 'correct_10way': 2418}
+seed0/p1_ft12 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2770, 'correct_10way': 2770}
+seed1/nop1_ft05 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 1880, 'correct_10way': 1880}
+seed1/nop1_ft12 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2344, 'correct_10way': 2344}
+seed1/p1_ft05 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2401, 'correct_10way': 2401}
+seed1/p1_ft12 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 2731, 'correct_10way': 2731}
+seed2/nop1_ft05 {'n': 3925, 'top1_inside_10_classes': 3925, 'frac_inside': 1.0, 'correct_1000way': 1902, 'correct_10way': 1902}
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 14 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,18 @@
+.venv/
+data/
+__pycache__/
+*.pyc
+# LaTeX build products
+*.aux
+*.log.tex
+*.toc
+*.out
+# Checkpoints (~23 MB each): publish them as release assets instead of committing them
+
+# Pilot runs (mechanical checks only)
+runs/pilot/
+
+# Series: resume-only and unused checkpoints (final models and phase-1 checkpoints are kept)
+runs/series_v2/**/ft_last.pt
+runs/series_v2/**/student_best.pt
+runs/**/*.tmp

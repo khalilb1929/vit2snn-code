@@ -1,0 +1,151 @@
+device=mps | T=4 | attn=ssa | surrogate=atan
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train=8522 monitor=947 test=3925 (split_file=splits/imagenette_train90_monitor10_seed0.json)
+teacher params=5,717,416 | student params=5,803,432 | W_proj params=0
+
+=== Progressive distillation: 13 stages ===
+  [stage  0] ep 0 it  100/532 mse=0.34612 lr=9.94e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  200/532 mse=0.29396 lr=9.48e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  300/532 mse=0.22718 lr=8.59e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  400/532 mse=0.19858 lr=7.36e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 0 it  500/532 mse=0.17430 lr=5.90e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  100/532 mse=0.17526 lr=3.86e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  200/532 mse=0.15227 lr=2.43e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  300/532 mse=0.16462 lr=1.24e-04 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  400/532 mse=0.14362 lr=4.14e-05 | mps alloc=69MiB driver=1165MiB
+  [stage  0] ep 1 it  500/532 mse=0.16480 lr=2.47e-06 | mps alloc=69MiB driver=1165MiB
+[stage  0] train_mse=0.16466 val_mse=0.15585 (43.1s) | mps alloc=44MiB driver=69MiB
+  [stage  1] ep 0 it  100/532 mse=0.60379 lr=9.94e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  200/532 mse=0.62280 lr=9.48e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  300/532 mse=0.50495 lr=8.59e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  400/532 mse=0.45055 lr=7.36e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 0 it  500/532 mse=0.47237 lr=5.90e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  100/532 mse=0.37821 lr=3.86e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  200/532 mse=0.39086 lr=2.43e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  300/532 mse=0.35375 lr=1.24e-04 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  400/532 mse=0.34831 lr=4.14e-05 | mps alloc=86MiB driver=1227MiB
+  [stage  1] ep 1 it  500/532 mse=0.35348 lr=2.47e-06 | mps alloc=86MiB driver=1227MiB
+[stage  1] train_mse=0.37606 val_mse=0.37340 (162.7s) | mps alloc=44MiB driver=67MiB
+  [stage  2] ep 0 it  100/532 mse=0.52228 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  200/532 mse=0.43902 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  300/532 mse=0.42703 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  400/532 mse=0.43505 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 0 it  500/532 mse=0.39346 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  100/532 mse=0.38998 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  200/532 mse=0.38393 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  300/532 mse=0.37741 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  400/532 mse=0.36538 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  2] ep 1 it  500/532 mse=0.37007 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  2] train_mse=0.37966 val_mse=0.38038 (229.1s) | mps alloc=44MiB driver=67MiB
+  [stage  3] ep 0 it  100/532 mse=0.45533 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  200/532 mse=0.39687 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  300/532 mse=0.38632 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  400/532 mse=0.35758 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 0 it  500/532 mse=0.34574 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  100/532 mse=0.32673 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  200/532 mse=0.33780 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  300/532 mse=0.32598 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  400/532 mse=0.33545 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  3] ep 1 it  500/532 mse=0.32706 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  3] train_mse=0.33901 val_mse=0.33911 (283.0s) | mps alloc=44MiB driver=67MiB
+  [stage  4] ep 0 it  100/532 mse=0.47683 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  200/532 mse=0.38840 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  300/532 mse=0.38409 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  400/532 mse=0.37432 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 0 it  500/532 mse=0.36142 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  100/532 mse=0.34713 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  200/532 mse=0.33472 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  300/532 mse=0.34863 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  400/532 mse=0.36485 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  4] ep 1 it  500/532 mse=0.34342 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  4] train_mse=0.35729 val_mse=0.35858 (336.6s) | mps alloc=44MiB driver=67MiB
+  [stage  5] ep 0 it  100/532 mse=0.38486 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  200/532 mse=0.34954 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  300/532 mse=0.35475 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  400/532 mse=0.34251 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 0 it  500/532 mse=0.33337 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  100/532 mse=0.34330 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  200/532 mse=0.33709 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  300/532 mse=0.34069 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  400/532 mse=0.32962 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  5] ep 1 it  500/532 mse=0.34026 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  5] train_mse=0.33354 val_mse=0.33526 (393.1s) | mps alloc=44MiB driver=67MiB
+  [stage  6] ep 0 it  100/532 mse=0.49276 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  200/532 mse=0.43039 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  300/532 mse=0.43540 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  400/532 mse=0.41883 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 0 it  500/532 mse=0.42529 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  100/532 mse=0.43950 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  200/532 mse=0.41562 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  300/532 mse=0.41332 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  400/532 mse=0.42749 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  6] ep 1 it  500/532 mse=0.43274 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  6] train_mse=0.41650 val_mse=0.42291 (437.7s) | mps alloc=44MiB driver=67MiB
+  [stage  7] ep 0 it  100/532 mse=0.56397 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 0 it  200/532 mse=0.52768 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 0 it  300/532 mse=0.51022 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 0 it  400/532 mse=0.50898 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 0 it  500/532 mse=0.49309 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 1 it  100/532 mse=0.47911 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 1 it  200/532 mse=0.50313 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 1 it  300/532 mse=0.48136 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 1 it  400/532 mse=0.51497 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  7] ep 1 it  500/532 mse=0.50402 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  7] train_mse=0.49332 val_mse=0.50221 (474.4s) | mps alloc=44MiB driver=67MiB
+  [stage  8] ep 0 it  100/532 mse=21.44293 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 0 it  200/532 mse=20.59211 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 0 it  300/532 mse=20.41460 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 0 it  400/532 mse=20.24256 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 0 it  500/532 mse=19.52813 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 1 it  100/532 mse=20.30997 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 1 it  200/532 mse=19.52800 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 1 it  300/532 mse=19.63588 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 1 it  400/532 mse=21.15344 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  8] ep 1 it  500/532 mse=18.92596 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  8] train_mse=20.14198 val_mse=22.01082 (534.7s) | mps alloc=44MiB driver=67MiB
+  [stage  9] ep 0 it  100/532 mse=19.68137 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 0 it  200/532 mse=18.52608 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 0 it  300/532 mse=17.30906 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 0 it  400/532 mse=16.56322 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 0 it  500/532 mse=18.96433 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 1 it  100/532 mse=20.61054 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 1 it  200/532 mse=18.75324 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 1 it  300/532 mse=19.51234 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 1 it  400/532 mse=19.18040 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage  9] ep 1 it  500/532 mse=18.99586 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage  9] train_mse=19.08847 val_mse=20.99971 (605.7s) | mps alloc=44MiB driver=67MiB
+  [stage 10] ep 0 it  100/532 mse=18.17579 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 0 it  200/532 mse=17.73130 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 0 it  300/532 mse=17.52049 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 0 it  400/532 mse=18.77932 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 0 it  500/532 mse=18.34885 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 1 it  100/532 mse=18.53897 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 1 it  200/532 mse=18.60341 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 1 it  300/532 mse=16.05541 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 1 it  400/532 mse=18.03073 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage 10] ep 1 it  500/532 mse=19.54772 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage 10] train_mse=18.23354 val_mse=20.09493 (635.3s) | mps alloc=44MiB driver=67MiB
+  [stage 11] ep 0 it  100/532 mse=15.79215 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 0 it  200/532 mse=18.37487 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 0 it  300/532 mse=18.00327 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 0 it  400/532 mse=19.04621 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 0 it  500/532 mse=18.08386 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 1 it  100/532 mse=16.62804 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 1 it  200/532 mse=17.86878 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 1 it  300/532 mse=18.53417 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 1 it  400/532 mse=15.96366 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage 11] ep 1 it  500/532 mse=19.39915 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage 11] train_mse=17.38903 val_mse=19.24740 (676.4s) | mps alloc=44MiB driver=67MiB
+  [stage 12] ep 0 it  100/532 mse=16.78504 lr=9.94e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 0 it  200/532 mse=17.32503 lr=9.48e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 0 it  300/532 mse=16.87166 lr=8.59e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 0 it  400/532 mse=15.90349 lr=7.36e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 0 it  500/532 mse=15.36352 lr=5.90e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 1 it  100/532 mse=17.82911 lr=3.86e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 1 it  200/532 mse=17.14440 lr=2.43e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 1 it  300/532 mse=17.22826 lr=1.24e-04 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 1 it  400/532 mse=17.73869 lr=4.14e-05 | mps alloc=84MiB driver=1227MiB
+  [stage 12] ep 1 it  500/532 mse=17.80328 lr=2.47e-06 | mps alloc=84MiB driver=1227MiB
+[stage 12] train_mse=16.68403 val_mse=18.43870 (697.8s) | mps alloc=44MiB driver=67MiB
+after distillation (monitor): {'student_top1': 0.105596624314785, 'student_top5': 0.42238649725914, 'teacher_top1': 78.88067626953125, 'teacher_top5': 95.4593505859375, 'agreement': 0.105596624314785, 'n': 947, 'student_top1_restricted': 18.479408264160156, 'teacher_top1_restricted': 99.15522766113281, 'agreement_restricted': 18.37381362915039, 'n_classes_restricted': 10, 'split': 'monitor'}
+saved to /Users/bibi/Documents/vit2snn/runs/series_v2/seed2/phase1

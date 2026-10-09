@@ -1,0 +1,301 @@
+{
+  "config": {
+    "teacher_name": "vit_tiny_patch16_224",
+    "pretrained": true,
+    "T": 4,
+    "student_dim": null,
+    "attn_mode": "ssa",
+    "tau": 2.0,
+    "v_threshold": 1.0,
+    "surrogate": "atan",
+    "surrogate_alpha": 2.0,
+    "detach_reset": true,
+    "learnable_tau": false,
+    "bipolar_input": true,
+    "init_from_teacher": true,
+    "train_patch_embed": false,
+    "proj_mode": "auto",
+    "data": "imagefolder",
+    "train_dir": "data/imagenette2-320/train",
+    "val_dir": "data/imagenette2-320/val",
+    "batch_size": 16,
+    "num_workers": 2,
+    "fake_size": 64,
+    "distill_epochs": 2,
+    "distill_lr": 0.001,
+    "distill_input": "student",
+    "per_step_weight": 0.0,
+    "finetune_epochs": 3,
+    "finetune_lr": 0.0001,
+    "kd_tau": 4.0,
+    "kd_alpha": 0.7,
+    "label_smoothing": 0.1,
+    "grad_checkpointing": false,
+    "weight_decay": 0.05,
+    "warmup_frac": 0.05,
+    "grad_clip": 1.0,
+    "accum_steps": 2,
+    "max_steps": null,
+    "eval_batches": null,
+    "log_every": 100,
+    "device": "auto",
+    "seed": 0,
+    "out_dir": "runs/series_v2/seed0/phase1",
+    "resume": true,
+    "skip_distill": false,
+    "skip_finetune": true,
+    "split_file": "splits/imagenette_train90_monitor10_seed0.json",
+    "init_checkpoint": null,
+    "final_eval": false
+  },
+  "provenance": {
+    "git_commit": "a7ae006be91ea05d34c59f25f04f35ab2084d3f9",
+    "script_modified_since_commit": false,
+    "python": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "timm": "1.0.30",
+    "device": "mps",
+    "split_file_sha256": "9893656b0754ea424427335d7a14f4e9b4f96b8bceaa018c533009b3b795ccee",
+    "init_checkpoint_sha256": null,
+    "data_seed_formula": "(seed*1000003 + phase*10007 + epoch) % (2**31-1); phase = stage (0..L) or 100 for fine-tuning"
+  },
+  "distill": [
+    {
+      "stage": 0,
+      "train_mse": [
+        0.2754942815106614,
+        0.16409192766462052
+      ],
+      "val_mse": 0.1556774616241455,
+      "seconds": 42.7,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1308229632,
+      "data_seeds": [
+        0,
+        1
+      ]
+    },
+    {
+      "stage": 1,
+      "train_mse": [
+        0.5596546373869243,
+        0.3776189474234904
+      ],
+      "val_mse": 0.3713067372639974,
+      "seconds": 151.1,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1296105472,
+      "data_seeds": [
+        10007,
+        10008
+      ]
+    },
+    {
+      "stage": 2,
+      "train_mse": [
+        0.48528892115542765,
+        0.37848683407432154
+      ],
+      "val_mse": 0.37887395222981773,
+      "seconds": 198.1,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1296105472,
+      "data_seeds": [
+        20014,
+        20015
+      ]
+    },
+    {
+      "stage": 3,
+      "train_mse": [
+        0.43065497032681804,
+        0.3391059646032807
+      ],
+      "val_mse": 0.3386301358540853,
+      "seconds": 246.3,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1296105472,
+      "data_seeds": [
+        30021,
+        30022
+      ]
+    },
+    {
+      "stage": 4,
+      "train_mse": [
+        0.4230147913882607,
+        0.357398527905457
+      ],
+      "val_mse": 0.35749505360921224,
+      "seconds": 301.2,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        40028,
+        40029
+      ]
+    },
+    {
+      "stage": 5,
+      "train_mse": [
+        0.3910227897471951,
+        0.332693630591371
+      ],
+      "val_mse": 0.33283319473266604,
+      "seconds": 355.0,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        50035,
+        50036
+      ]
+    },
+    {
+      "stage": 6,
+      "train_mse": [
+        0.4738298287068991,
+        0.41379670451458234
+      ],
+      "val_mse": 0.418554433186849,
+      "seconds": 407.0,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        60042,
+        60043
+      ]
+    },
+    {
+      "stage": 7,
+      "train_mse": [
+        0.5454834672741424,
+        0.48843177279135336
+      ],
+      "val_mse": 0.4968952496846517,
+      "seconds": 480.0,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        70049,
+        70050
+      ]
+    },
+    {
+      "stage": 8,
+      "train_mse": [
+        20.561437162241543,
+        20.061391271146615
+      ],
+      "val_mse": 22.018247477213542,
+      "seconds": 528.3,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        80056,
+        80057
+      ]
+    },
+    {
+      "stage": 9,
+      "train_mse": [
+        19.390823249530076,
+        19.132219587053573
+      ],
+      "val_mse": 21.02188517252604,
+      "seconds": 592.8,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        90063,
+        90064
+      ]
+    },
+    {
+      "stage": 10,
+      "train_mse": [
+        18.50087927337876,
+        18.283384853735903
+      ],
+      "val_mse": 20.11405029296875,
+      "seconds": 651.0,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        100070,
+        100071
+      ]
+    },
+    {
+      "stage": 11,
+      "train_mse": [
+        17.722006432095863,
+        17.470058814027254
+      ],
+      "val_mse": 19.272371419270833,
+      "seconds": 743.5,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        110077,
+        110078
+      ]
+    },
+    {
+      "stage": 12,
+      "train_mse": [
+        17.047757944666355,
+        16.775654957706767
+      ],
+      "val_mse": 18.47812703450521,
+      "seconds": 762.4,
+      "updates": 532,
+      "examples": 17024,
+      "peak_mem_bytes": 1286455296,
+      "data_seeds": [
+        120084,
+        120085
+      ]
+    }
+  ],
+  "complete": true,
+  "after_distill": {
+    "student_top1": 0.0,
+    "student_top5": 0.21119324862957,
+    "teacher_top1": 78.88067626953125,
+    "teacher_top5": 95.4593505859375,
+    "agreement": 0.0,
+    "n": 947,
+    "student_top1_restricted": 17.845829010009766,
+    "teacher_top1_restricted": 99.15522766113281,
+    "agreement_restricted": 17.740232467651367,
+    "n_classes_restricted": 10,
+    "split": "monitor"
+  },
+  "final": {
+    "student_top1": 0.0,
+    "student_top5": 0.21119324862957,
+    "teacher_top1": 78.88067626953125,
+    "teacher_top5": 95.4593505859375,
+    "agreement": 0.0,
+    "n": 947,
+    "student_top1_restricted": 17.845829010009766,
+    "teacher_top1_restricted": 99.15522766113281,
+    "agreement_restricted": 17.740232467651367,
+    "n_classes_restricted": 10,
+    "split": "monitor"
+  }
+}
